@@ -53,11 +53,46 @@ player_choice(board):
                          
 replay():
              
-            This function asks the user whether they want to play again or not.ANd the given input is converted to lower letters and checks whether it
-            starts with 'y'. 
+            This function asks the user whether they want to play again or not.ANd the given input is converted to 
+            lowerletters and checks whether it starts with 'y'. 
              
              
-        
+ ---------------------------------------------------------------------------------------------------------------------------
+ 
+=> Initially, the board is empty which is said by the 'theBoard' variable.
+
+=> player_input() function returns a tuple as an output which is unpacked with the help of two variables namely, player1_marker    and player2_marker.
+
+=> As we know choose_first() function will return a random player and it is assigned to a variable called as 'turn'.
+
+=> play_game asks for whether the player is ready to play or not.
+
+=> When the input says 'yes' then, 'game_on' will be True.
+
+=> If it is player1's turn then firstly, it will show the empty board.Next, it will call the player_choice function asking
+   for the position where the player wants to place his marker and assigns it to the 'position' variable.
+  
+=> Next, it will call the place_marker function by giving theBoard, player1_marker, position as arguments. It will fill the
+   position of the board with player1 marker.
+   
+=> Then, it will check whether anyone has won the game by calling win_check() function. If any row, column, or any diagonal 
+   has player1's marker commonly then it will dispaly the board and print's out a appreciating statement.
+   Then, the game_on will become False.
+   
+=> Else, it checks the entire board with the help of full_board_check() function . If all positions are filled and no one has      won the game then it will printout the message saying "the game is a draw". 
+
+=> Next, at the end it will assign the turn as player 2. If the above things doesn't happen then turn will be changed to 
+   another player.
+ 
+=> player2 also goes through the above steps same as player1.
+
+=> At last, the board may be matched with anyone's marker or the board may get filled without anybody's victory.
+   In that cases, it will printout the corresponding statement.
+
+=> Lastly, it will ask the user whether they wants to play again, if 'yes' it will repeat the loop else break the loop.
+
+
+
 
 
 
